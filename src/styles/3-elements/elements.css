@@ -1,0 +1,137 @@
+body {
+  font-family: var(--text);
+  color: var(--foreground);
+  background-color: var(--background);
+  font-size: var(--font-base);
+  line-height: var(--leading-6);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading);
+}
+
+code {
+  /* font-family: var(--monospace); */
+}
+
+hr {
+  margin-block: 48px;
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+:focus {
+  outline-offset: 3px;
+  outline-color: var(--ring);
+  outline-width: 2px;
+}
+
+input,
+textarea,
+select {
+  padding: var(--spacing-2) var(--spacing-3);
+  background-color: var(--white);
+
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--rounded-md);
+
+  font-family: Inter, sans-serif;
+  color: var(--foreground);
+}
+
+input,
+select {
+  line-height: var(--leading-6);
+}
+
+textarea {
+  line-height: var(--leading-5);
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: var(--muted-foreground);
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  opacity: 0.5;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--neutral-300);
+  outline-offset: var(--space-unit);
+}
+
+input[type="file"]::file-selector-button {
+  border: 0;
+  padding: 0 var(--space-unit);
+  background-color: transparent;
+
+  font-weight: 500;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  position: relative;
+
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid var(--muted-foreground-subtle);
+
+  accent-color: var(--primary);
+}
+
+input[type="radio"]:focus::before,
+input[type="checkbox"]:focus::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  width: inherit;
+  height: inherit;
+  padding: var(--space-unit);
+
+  background-color: transparent;
+
+  outline: 2px solid var(--neutral-300);
+  outline-offset: var(--space-unit);
+}
+
+input[type="radio"]:focus::before {
+  border-radius: var(--rounded-full);
+}
+
+input[type="checkbox"]:focus::before {
+  border-radius: 2px;
+}
+
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: none;
+}
+
+fieldset {
+  border: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  background-color: var(--white);
+  border-radius: var(--rounded-lg);
+  padding: var(--spacing-4);
+}

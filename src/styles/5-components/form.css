@@ -1,0 +1,27 @@
+.demo__container {
+  background-color: #f5f5f5;
+  margin-top: 32px;
+  border-radius: var(--rounded-lg);
+  padding: 48px 16px 48px 16px;
+  display: grid;
+  gap: 16px;
+}
+
+.span-form{
+  color:  #DC2626;
+  font-family: inter;
+  font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+}
+
+.validation-message {
+  color: #DC2626;
+  display: none;
+}
+.invalid {
+  display: block;
+}
+#response {
+  margin-top: 20px;
+}
