@@ -1,5 +1,5 @@
 export const counterLayout = `
-<div id="content-counter">
+<div id="counter-content">
     <h2 class="margin-top-0">Counter</h2>
     <p class="project__component-text">
         Descripción: Este componente interactivo nos permite modificar un
