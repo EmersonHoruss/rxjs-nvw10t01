@@ -7,7 +7,6 @@
 .projects__item {
   border-radius: var(--rounded);
   background-color: var(--muted);
-  cursor: pointer;
 }
 
 .projects__item-details {
@@ -28,10 +27,29 @@
   text-overflow: ellipsis;
 }
 
-.projects__item-types {
+.projects__item-developers {
   color: var(--muted-foreground);
   font-family: var(--text);
   font-weight: 400;
   font-size: var(--font-sm);
   line-height: var(--leading-7);
+  display: flex;
+  align-items: center;
+}
+
+.projects__item-buttons {
+  display: flex;
+  justify-content: right;
+  gap: var(--spacing-2);
+}
+
+.projects__item-image {
+  width: 100%;
+  height: 180px;
+}
+
+.projects__item-image img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }

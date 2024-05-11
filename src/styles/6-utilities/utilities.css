@@ -5,3 +5,7 @@
 .bold {
   font-weight: bold;
 }
+
+.padding-left-2 {
+  padding-left: var(--spacing-2);
+}

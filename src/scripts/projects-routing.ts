@@ -1,12 +1,17 @@
 export const projectsRouting = () => {
-  const projectsContainer = document.querySelector(".projects") as HTMLElement;
+  document.addEventListener("DOMContentLoaded", () => {
+    const projectsContainer = document.querySelector(
+      ".projects"
+    ) as HTMLElement;
 
-  projectsContainer.addEventListener("click", (event: MouseEvent) => {
-    const target = event.target as HTMLElement;
-    const projectItem = target.closest(".projects__item");
-    if (projectItem) {
-      const projectId = projectItem.id;
-      console.log("ID del proyecto:", projectId);
+    if (projectsContainer) {
+      projectsContainer.addEventListener("click", (event: MouseEvent) => {
+        const target = event.target as HTMLElement;
+        if (target instanceof HTMLButtonElement) {
+          const projectId = target.id;
+          window.location.href = projectId;
+        }
+      });
     }
   });
 };
