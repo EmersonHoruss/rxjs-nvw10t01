@@ -1,7 +1,7 @@
 /* Footer */
 
 .footer {
-  padding-block: var(--spacing-12);
+  padding-block: var(--spacing-2);
   text-align: center;
 
   color: var(--muted-foreground);

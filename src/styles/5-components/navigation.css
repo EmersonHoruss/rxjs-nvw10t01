@@ -2,14 +2,6 @@
 .navigation {
   display: none;
 }
-/* @media (min-width: 769px){
-  .navigation {
-    flex-grow: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-} */
 
 .navigation ul {
   list-style: none;
