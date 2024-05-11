@@ -49,6 +49,8 @@
 @import url(5-components/developer.css);
 @import url(5-components/encuesta.css);
 @import url(5-components/music-player.css);
+@import url(5-components/demo-user-activity-monitor.css);
+@import url(5-components/counter.css);
 
 /* 6. Utilities */
 @import url(6-utilities/utilities.css);

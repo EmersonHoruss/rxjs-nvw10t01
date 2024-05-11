@@ -105,6 +105,7 @@
   --danger: var(--red-50);
   --danger-foreground: var(--red-950);
   --danger-border: var(--red-600);
+  --background-modal: hsla(0, 0%, 4%, 0.4);
 }
 @media (prefers-color-scheme: dark) {
   :root {
