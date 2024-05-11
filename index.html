@@ -1,14 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-
+    <title>Rxjs projects</title>
+    <link rel="stylesheet" href="./src/styles/index.css" />
   </head>
   <body>
-    
+    <header class="header">
+      <h1 class="header__logo"><a href="index.html">Codificable</a></h1>
+      <nav class="navigation">
+        <ul>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="/sobre-nosotros.html">Sobre nosotros</a></li>
+        </ul>
+        <button id="/navigation__login-text" class="button-default">
+          Login
+        </button>
+      </nav>
+      <button id="navigation__login-icon" class="button-icon button-outline">
+        <!-- <img
+          src="/assets/icons/menu.svg"
+          style="width: fit-content; height: 16px"
+        /> -->
+      </button>
+    </header>
+
+    <main>
+      <section class="section">
+        <div>
+          <h2 class="hero__title">Somos Codificable</h2>
+          <p class="hero__subtitle">
+            Conoce más acerca de esta gran comunidad de desarrolladores
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <small class="footer__text"
+        >&copy; 2023 Codificable - Todos los derechos reservados</small
+      >
+    </footer>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

@@ -1,85 +1,171 @@
-/* Button */
-
-/* Default (primary) */
-
-.button {
-  display: inline-flex;
-  height: 2.5rem;
-  padding: var(--spacing-2) var(--spacing-4);
+.button-default {
+  width: fit-content;
+  height: 40px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-2);
-  border: 1px solid transparent;
+  border: none;
   border-radius: var(--rounded-md);
   background-color: var(--primary);
+  padding: var(--spacing-2) var(--spacing-4);
+  gap: var(--spacing-2);
+
+  color: var(--primary-foreground);
+  font-family: var(--text);
+  font-weight: 500;
+  font-size: var(--font-sm);
+  line-height: var(--leading-5);
+  text-decoration: none;
   cursor: pointer;
 
-  font-size: var(--font-sm);
-  color: var(--primary-foreground);
-  line-height: var(--leading-5);
-  font-weight: 500;
+  transition: 250ms;
 }
 
-.button:hover {
+.button--full-width {
+  width: 100%;
+}
+
+.button-default:hover {
   background-color: var(--primary-hover);
+  transition: ease-in 150ms;
 }
 
-.button:active {
+.button-default:active {
   background-color: var(--primary-active);
 }
 
-.button:disabled {
+.button-default:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-  pointer-events: none;
-  user-select: none;
 }
 
-/* Secondary */
+.button-default:focus {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
 
-.button--secondary {
+  animation: presionar_boton 500ms;
+}
+
+.button-secondary {
+  width: fit-content;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: var(--rounded-md);
   background-color: var(--secondary);
+  padding: var(--spacing-2) var(--spacing-4);
+  gap: var(--spacing-2);
+
   color: var(--secondary-foreground);
+  font-family: var(--text);
+  font-weight: 500;
+  font-size: var(--font-sm);
+  line-height: var(--leading-5);
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.button--secondary:hover {
+.button-secondary:hover {
   background-color: var(--secondary-hover);
+  transition: ease-in 150ms;
 }
 
-.button--secondary:active {
+.button-secondary:active {
   background-color: var(--secondary-active);
 }
 
-/* Outline */
+.button-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 
-.button--outline {
-  border-color: var(--border);
+.button-outline {
+  width: fit-content;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--rounded-md);
   background-color: var(--background);
+  padding: var(--spacing-2) var(--spacing-4);
+  gap: var(--spacing-2);
+
   color: var(--secondary-foreground);
+  font-family: var(--text);
+  font-weight: 500;
+  font-size: var(--font-sm);
+  line-height: var(--leading-5);
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.button--outline:hover {
+.button-outline:hover {
   background-color: var(--background-hover);
+  transition: ease-in 150ms;
 }
 
-.button--outline:active {
+.button-outline:active {
   background-color: var(--background-active);
 }
 
-/* Sizes */
+.button-outline:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 
 .button--sm {
-  height: 2.25rem;
+  width: fit-content;
+  height: 36px;
   padding: var(--spacing-2) var(--spacing-3);
 }
 
 .button--lg {
-  height: 2.75rem;
+  width: fit-content;
+  height: 44px;
   padding: var(--spacing-2) var(--spacing-8);
 }
 
-.button--icon {
-  height: 2.5rem;
-  width: 2.5rem;
+.button-icon {
+  width: 40px;
+  height: 40px;
   padding: 0;
+}
+
+.button-default svg,
+.button-default img,
+.button-secondary svg,
+.button-secondary img,
+.button-outline svg,
+.button-outline img {
+  width: 16px;
+  height: 16px;
+}
+
+.button-up{
+  background: var(--neutral-200);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--foreground);
+  width: 40px;
+  height: 40px;
+
+  animation: deslizar_boton 1000ms;
+
+  svg{
+    all: unset;
+    width: 20px;
+    margin-top: 10px;
+   
+  }
+}
+.button-up__sticky{
+  position: sticky;
+  margin-left: auto;
+  bottom: 16px;
+  grid-column-start: 2;
 }

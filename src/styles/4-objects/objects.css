@@ -1,73 +1,68 @@
-/* Sections */
-
-.section-sm {
-  padding-block: var(--spacing-6);
-}
-
 .section {
   padding-block: var(--spacing-12);
 }
 
-.section-lg {
-  padding-block: var(--spacing-24);
-}
-
-.section-xl {
-  padding-block: var(--spacing-36);
-}
-
-/* Container */
-
 .container {
-  --padding: 16px;
-  padding-inline: var(--padding);
+  --padding: var(--spacing-4); /* 16px */
+  padding-inline: var(--spacing-4); 
   max-width: var(--width-7xl);
+  /* max-width: 343px; */
   margin-inline: auto;
 }
 
-@media (min-width: 40rem) {
-  .container {
-    --padding: 24px;
-  }
+.container--sm {
+  max-width: 592px;
 }
 
-@media (min-width: 64rem) {
-  .container {
-    --padding: 32px;
-  }
+.container--lg {
+  max-width: 960px;
 }
-
-/*
-Pancake Layout
-
-<div class="pancake-stack">
-  <header>...</header>
-  <main>...</main>
-  <footer>...</footer>
-</div>
-*/
 
 .pancake-stack {
-  height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  height: auto;
 }
 
-/* Pancake Stack - Version Flexbox */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
 
-/* .pancake-stack {
-  height: 100vh;
+.form-field__label {
+  font-family: Inter, sans-serif;
+  font-size: var(--font-sm);
+  line-height: 14px;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+legend.form-field__label {
+  margin-bottom: var(--spacing-2);
+}
+
+.form-field__main-content {
   display: flex;
   flex-direction: column;
 }
 
-.pancake-stack > :nth-child(2) {
-  flex-grow: 1;
-} */
+.form-field__helper-text {
+  font-family: Inter, sans-serif;
+  font-size: var(--font-sm);
+  line-height: var(--leading-5);
+  font-weight: 400;
+  color: var(--muted-foreground);
+}
 
-.centered-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+@media (min-width:769px) and (max-width:1024px){
+  .container{
+      padding-inline: var(--spacing-6); /* 24px */
+  }
+}
+@media (min-width:1025px){
+  .container{
+      padding-inline: var(--spacing-8); /* 32px */
+  }
 }

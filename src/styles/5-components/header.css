@@ -1,43 +1,46 @@
-/*
-<header class="header">
-  <div class="container header__container">
-    <img
-      src="assets/images/codeable-logo-sm.svg"
-      alt="codeable-logo"
-      width="135"
-      height="32"
-      class="header__logo"
-    />
-    <nav class="navigation header__navigation">
-      <ul>
-        <li><a href="/diagramas.html">Diagramas VV</a></li>
-        <li><a href="/funciones.html">Funciones</a></li>
-        <li><a href="/dom.html">Manipulación del DOM</a></li>
-      </ul>
-    </nav>
-    <p class="header__name">Diego Torres</p>
-  </div>
-</header>
-*/
-
+/* Header */
 .header {
-  padding: var(--spacing-4, 16px) 0px;
-}
+  /* padding-block: 24px;
+  display: flex; */
 
-.header__container {
+
+  padding-block: var(--spacing-6);
+  padding-inline: var(--spacing-8);
   display: flex;
   align-items: center;
-  
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background: var(--background);
+}
+
+.header__subtitles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.header>* {
+  display: inline-block;
 }
 
 .header__logo {
-  margin-right: 1rem;
+  margin: 0;
+  margin-right: 64px;
+
+  color: var(--primary);
+  font-family: var(--display);
+  font-size: var(--font-3xl);
+  font-weight: 500;
+  line-height: 1;
+  /* 100% */
 }
 
-.header__name {
-  color: var(--muted-foreground, #525252);
-  font-weight: 600;
-  line-height: var(--leading-6);
+.header__logo a {
+  text-decoration: none;
+  color: inherit;
+}
 
-  margin-left: auto;
+.header__logo a:hover {
+  color: var(--primary-hover);
 }

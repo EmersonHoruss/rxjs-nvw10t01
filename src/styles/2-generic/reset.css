@@ -13,6 +13,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -44,10 +48,6 @@ h6 {
   overflow-wrap: break-word;
 }
 
-fieldset{
-  border: none;
-}
-
 /* 
   Extra resets for web apps
 */
@@ -61,4 +61,3 @@ html,
 body {
   height: 100%;
 }
-

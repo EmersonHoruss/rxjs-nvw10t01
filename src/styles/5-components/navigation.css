@@ -1,39 +1,64 @@
-/*
-<nav class="navigation">
-  <ul>
-    <li class="active"><a href="">..</a></li>
-    <li><a href="">..</a></li>
-    <li><a href="">..</a></li>
-  </ul>
-</nav>
-*/
+/* Navigation */
+.navigation {
+  display: none;
+}
+/* @media (min-width: 769px){
+  .navigation {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+} */
 
 .navigation ul {
   list-style: none;
-  display: flex;
-  gap: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation li {
+  display: inline-block;
+  padding: 8px;
+  margin-right: 8px;
 }
 
 .navigation a {
-  display: block;
-  padding: var(--spacing-2) var(--spacing-3);
-  border-radius: var(--rounded-md);
-
-  color: var(--foreground);
-  font-size: var(--font-sm);
+  color: var(--muted-foreground-subtle);
+  font-size: var(--font-base);
   font-weight: 500;
-  line-height: var(--leading-5);
+  line-height: 1; /* 100% */
   text-decoration: none;
 }
 
 .navigation a:hover {
-  background-color: var(--background-hover);
+  color: var(--muted-foreground);
 }
 
 .navigation .active a {
-  background-color: var(--background-active);
+  color: var(--primary);
 }
 
 .navigation .active a:hover {
-  background-color: var(--background-hover);
+  color: var(--primary-hover);
+}
+
+#navigation__login-text {
+  display: none;
+}
+
+@media (min-width: 641px) {
+  #navigation__login-icon {
+    display: none;
+  }
+
+  .navigation {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  #navigation__login-text {
+    display: initial;
+  }
 }
