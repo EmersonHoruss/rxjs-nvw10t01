@@ -38,10 +38,66 @@
               <h2>Description</h2>
               <p>
                 This project lets you know about your interaction with the page
-                on real time. To do this, I used Rxjs, below you can find
-                technical specifications, you can also test it using the demo
-                and finally the implementation.
+                on real time. To do this, I used the new knowleadges about Rxjs,
+                below you can find technical specifications about what things of
+                Rxjs are specially used. Also you can test it using the demo.
               </p>
+              <h2>Rxjs</h2>
+              <p>
+                Below you will find the operators I used and the reason, the
+                utility.
+              </p>
+              <ul>
+                <li>
+                  <span class="bold">fromEvent: </span>
+                  <span>
+                    to detect movements of the mouse and also the clicks.
+                  </span>
+                  <span>
+                    Click on
+                    <a href="https://rxjs.dev/api/index/function/fromEvent">
+                      fromEvent
+                    </a>
+                    to get the documentation.
+                  </span>
+                </li>
+                <li>
+                  <span class="bold">throttleTime: </span>
+                  <span>
+                    to reduce the frecuency of event emition, on this way I
+                    improved the performance of the monitor through do not
+                    filling the RAM.
+                  </span>
+                  <span>
+                    Click on
+                    <a href="https://rxjs.dev/api/index/function/throttleTime">
+                      throttleTime
+                    </a>
+                    to get the documentation.
+                  </span>
+                </li>
+                <li>
+                  <span class="bold">map: </span>
+                  <span
+                    >to get the data with specially type, ready to use for
+                    monitor.
+                  </span>
+                  <span>
+                    Click on
+                    <a href="https://rxjs.dev/api/index/function/map"> map </a>
+                    to get the documentation.
+                  </span>
+                </li>
+              </ul>
+              <h2>Demo</h2>
+              <p>
+                This demo simulates a real web page and in a card will show your
+                clicks and position of mouse. Enjoy it!.
+                &#128526;&#128293;&#128526;&#128293;
+              </p>
+              <div class="center padding-2">
+                <button class="button-default" id="start">Start</button>
+              </div>
             </div>
           </div>
         </div>
@@ -54,5 +110,6 @@
       >
     </footer>
     <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/scripts/user-activity-monitor-scripts/user-activity-monitor.ts"></script>
   </body>
 </html>
