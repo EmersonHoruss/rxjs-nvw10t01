@@ -1,2 +1,3 @@
-// import "./styles/index.css";
-console.log(1234)
+import { projectsRouting } from "./scripts/projects-routing";
+
+projectsRouting();

@@ -45,3 +45,7 @@
 @import url(5-components/our-team.css);
 @import url(5-components/faq.css);
 @import url(5-components/checkables.css);
+@import url(5-components/projects.css);
+
+/* 6. Utilities */
+@import url(6-utilities/utilities.css);
