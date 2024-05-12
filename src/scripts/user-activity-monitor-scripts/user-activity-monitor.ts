@@ -3,6 +3,7 @@ import { counterLayout } from "../../layouts/user-activity-monitor-layouts/count
 import { filterLayout } from "../../layouts/user-activity-monitor-layouts/filter-layout";
 import { counter } from "./counter";
 import { filter } from "./filter";
+import { monitor } from "./monitor";
 
 const buttonStart = document.getElementById("start") as HTMLElement;
 const bodyElement = document.querySelector("body") as HTMLElement;
@@ -13,6 +14,7 @@ buttonStart.addEventListener("click", () => {
 const main = () => {
   createLayout();
   addListeners();
+  monitor();
 };
 
 const createLayout = () => {
@@ -63,8 +65,8 @@ const addListeners = () => {
 };
 
 const destroyLayout = () => {
-  const userActivityMonitor = document.getElementById("user-activity-monitor-id") as HTMLElement;
-  if (userActivityMonitor.parentNode) {
-    bodyElement.removeChild(userActivityMonitor.parentNode);
+  const demo = document.getElementById("demo-user-activity-monitor-id") as HTMLElement;
+  if (demo.parentNode) {
+    bodyElement.removeChild(demo.parentNode);
   }
 };
