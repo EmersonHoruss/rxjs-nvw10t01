@@ -52,6 +52,9 @@
 @import url(5-components/demo-user-activity-monitor.css);
 @import url(5-components/counter.css);
 @import url(5-components/monitor.css);
+@import url(5-components/card.css);
+@import url(5-components/scroll.css);
+@import url(5-components/table.css);
 
 /* 6. Utilities */
 @import url(6-utilities/utilities.css);

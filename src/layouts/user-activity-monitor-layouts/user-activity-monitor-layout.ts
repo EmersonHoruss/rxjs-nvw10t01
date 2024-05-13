@@ -4,10 +4,10 @@ export const userActivityMonitorLayout = `
     <header class="header header__shadow padding-y-2">
         <nav class="navigation">
             <ul class="margin-y-0 padding-0">
-                <li class="margin-y-0 demo-user-activity-monitor__tab" id="counter">
+                <li class="margin-y-0 demo-user-activity-monitor__tab cursor-pointer" id="counter">
                     <a>Counter</a>
                 </li>
-                <li class="margin-y-0 demo-user-activity-monitor__tab" id="filter">
+                <li class="margin-y-0 demo-user-activity-monitor__tab cursor-pointer" id="filter">
                     <a>Filter</a>
                 </li>
             </ul>
@@ -20,7 +20,7 @@ export const userActivityMonitorLayout = `
         </nav>
     </header>
 
-    <main>
+    <main class="scroll">
         <div class="section">
             <div class="container">
                 <div class="article">

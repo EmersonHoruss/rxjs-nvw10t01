@@ -7,6 +7,7 @@ import { monitor } from "./monitor";
 
 const buttonStart = document.getElementById("start") as HTMLElement;
 const bodyElement = document.querySelector("body") as HTMLElement;
+let monitorRef: () => void = () => {};
 buttonStart.addEventListener("click", () => {
   main();
 });
@@ -14,7 +15,7 @@ buttonStart.addEventListener("click", () => {
 const main = () => {
   createLayout();
   addListeners();
-  monitor();
+  monitorRef = monitor();
 };
 
 const createLayout = () => {
@@ -65,8 +66,11 @@ const addListeners = () => {
 };
 
 const destroyLayout = () => {
-  const demo = document.getElementById("demo-user-activity-monitor-id") as HTMLElement;
+  const demo = document.getElementById(
+    "demo-user-activity-monitor-id"
+  ) as HTMLElement;
   if (demo.parentNode) {
     bodyElement.removeChild(demo.parentNode);
+    monitorRef();
   }
 };

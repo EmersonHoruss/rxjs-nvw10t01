@@ -27,7 +27,7 @@ export const counterLayout = `
         </li>
     </ul>
     <div class="center margin-top-8">
-        <div class="counter">
+        <div class="counter card">
             <div class="counter__content">
                 <p class="counter__title">Valor Actual:</p>
                 <p class="counter__status" id="counter-status"></p>
