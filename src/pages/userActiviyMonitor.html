@@ -1,1 +1,115 @@
-userActiviyMonitor
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EEG Codeable</title>
+    <link rel="stylesheet" href="/src/styles/index.css" />
+  </head>
+  <body class="pancake-stack">
+    <header class="header header__shadow">
+      <h1 class="header__logo"><a href="index.html">EEG Codeable</a></h1>
+      <nav class="navigation">
+        <ul>
+          <li><a href="/src/pages/about.html">About</a></li>
+          <li class="active">
+            <a href="/src/pages/projects.html">Projects</a>
+          </li>
+        </ul>
+        <button id="/navigation__login-text" class="button-default">
+          Subscribe
+        </button>
+      </nav>
+      <button id="navigation__login-icon" class="button-icon button-outline">
+        <img
+          src="/src/assets/icons/menu.svg"
+          style="width: fit-content; height: 16px"
+        />
+      </button>
+    </header>
+
+    <main>
+      <div class="section">
+        <div class="container">
+          <div class="article">
+            <div class="content">
+              <h1>User Activity Monitor</h1>
+              <h2>Description</h2>
+              <p>
+                This project lets you know about your interaction with the page
+                on real time. To do this, I used the new knowleadges about Rxjs,
+                below you can find technical specifications about what things of
+                Rxjs are specially used. Also you can test it using the demo.
+              </p>
+              <h2>Rxjs</h2>
+              <p>
+                Below you will find the operators I used and the reason, the
+                utility.
+              </p>
+              <ul>
+                <li>
+                  <span class="bold">fromEvent: </span>
+                  <span>
+                    to detect movements of the mouse and also the clicks.
+                  </span>
+                  <span>
+                    Click on
+                    <a href="https://rxjs.dev/api/index/function/fromEvent">
+                      fromEvent
+                    </a>
+                    to get the documentation.
+                  </span>
+                </li>
+                <li>
+                  <span class="bold">throttleTime: </span>
+                  <span>
+                    to reduce the frecuency of event emition, on this way I
+                    improved the performance of the monitor through do not
+                    filling the RAM.
+                  </span>
+                  <span>
+                    Click on
+                    <a href="https://rxjs.dev/api/index/function/throttleTime">
+                      throttleTime
+                    </a>
+                    to get the documentation.
+                  </span>
+                </li>
+                <li>
+                  <span class="bold">map: </span>
+                  <span
+                    >to get the data with specially type, ready to use for
+                    monitor.
+                  </span>
+                  <span>
+                    Click on
+                    <a href="https://rxjs.dev/api/index/function/map"> map </a>
+                    to get the documentation.
+                  </span>
+                </li>
+              </ul>
+              <h2>Demo</h2>
+              <p>
+                This demo simulates a real web page and in a card will show your
+                clicks and position of mouse. Enjoy it!.
+                &#128526;&#128293;&#128526;&#128293;
+              </p>
+              <div class="center padding-2">
+                <button class="button-default" id="start">Start</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="container footer">
+      <small class="footer__text"
+        >&copy; 2024 EEG Codeable - Todos los derechos reservados</small
+      >
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/scripts/user-activity-monitor-scripts/user-activity-monitor.ts"></script>
+  </body>
+</html>
