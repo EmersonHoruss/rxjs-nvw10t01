@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EEG Codeable</title>
+    <link rel="stylesheet" href="/src/styles/index.css" />
+  </head>
+  <body class="pancake-stack scroll">
+    <header class="header header__shadow">
+      <h1 class="header__logo"><a href="index.html">EEG Codeable</a></h1>
+      <nav class="navigation">
+        <ul>
+          <li class="active"><a href="/src/pages/about.html">About</a></li>
+          <li><a href="/src/pages/projects.html">Projects</a></li>
+        </ul>
+        <button id="/navigation__login-text" class="button-default">
+          Subscribe
+        </button>
+      </nav>
+      <button id="navigation__login-icon" class="button-icon button-outline">
+        <img
+          src="/src/assets/icons/menu.svg"
+          style="width: fit-content; height: 16px"
+        />
+      </button>
+    </header>
+
+    <main class="container">
+      <section class="section content">
+        <h1 class="survey-title">Simulador de Encuestas en Tiempo Real</h1>
+        <p class="survey__p">
+          <strong>Objetivo:</strong> Implementar un sistema de encuestas
+          interactivo donde los resultados se actualicen dinámicamente en
+          respuesta a las entradas de los usuarios.
+        </p>
+        <h2 class="survey-subtitle">Funcionalidades clave</h2>
+        <ul>
+          <li class="survey__p">
+            Configurar
+            <code>fromEvent</code>
+            para manejar las selecciones de los usuarios en la encuesta.
+          </li>
+          <li class="survey__p">
+            Emplear <code>scan</code> para acumular y calcular los resultados de
+            la encuesta en tiempo real.
+          </li>
+          <li class="survey__p">
+            Mostrar los resultados actualizados usando <code>map</code> para
+            transformar los datos acumulados en un formato visualmente
+            atractivo.
+          </li>
+        </ul>
+        <p>
+          Este código implementa una encuesta interactiva donde los usuarios
+          pueden votar por diferentes opciones representadas por elementos HTML.
+          La simulación de la recolección de datos se realiza a intervalos
+          específicos para cada opción, y los resultados se actualizan
+          dinámicamente en la interfaz de usuario. Los botones proporcionados
+          permiten iniciar y detener la simulación de la recolección de datos.
+        </p>
+        <div class="container">
+          <div class="survey">
+            <div>
+              <h2 class="main-question">¿Quién ganará la copa america 2024?</h2>
+              <img
+                class="img-copa-america"
+                src="/src/assets/images/CopaAmerica.jpg"
+                alt="img_copa_america"
+              />
+              <p id="total-votos" style="text-align: center"></p>
+              <div class="options-wrapper">
+                <button id="option-brasil" class="button-default">
+                  Brasil
+                </button>
+                <button id="option-argentina" class="button-default">
+                  Argentina
+                </button>
+                <button id="option-uruguay" class="button-default">
+                  Uruguay
+                </button>
+                <button id="option-otros" class="button-default">Otro</button>
+              </div>
+            </div>
+            <div class="estadisticas-wrapper">
+              <h3 class="resultados-title">Resultados</h3>
+              <div>
+                <div class="estadistics-name">
+                  <p>Brasil</p>
+                  <p><span id="brasil-votos">0</span> votos</p>
+                </div>
+                <div class="estadistics-name">
+                  <p>Argentina</p>
+                  <p><span id="argentina-votos">0</span> votos</p>
+                </div>
+                <div class="estadistics-name">
+                  <p>Uruguay</p>
+                  <p><span id="uruguay-votos">0</span> votos</p>
+                </div>
+                <div class="estadistics-name">
+                  <p>Otros</p>
+                  <p><span id="otros-votos">0</span> votos</p>
+                </div>
+              </div>
+              <div class="buttons-fetch-wrapper">
+                <button class="button-secondary" id="button-fetch-start">
+                  Simular peticiones
+                </button>
+                <button class="button-secondary" id="button-fetch-stop">
+                  Detener peticiones
+                </button>
+                <button class="button-secondary" id="button-fetch-reset">
+                  Resetear Votos
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <small class="footer__text"
+        >&copy; 2024 EEG Codeable - Todos los derechos reservados</small
+      >
+    </footer>
+    <script type="module" src="/src/scripts/surveySimulator.ts"></script>
+  </body>
+</html>
