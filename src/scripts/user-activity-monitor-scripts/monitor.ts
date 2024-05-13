@@ -101,7 +101,10 @@ const monitorService: MonitorService = () => {
   const mouseclickSubscription = fromEvent<MouseEvent>(demo, "click")
     .pipe(
       throttleTime(globalState.clickTime),
-      map(
+      filter((event: MouseEvent) => {
+        const dashboard = document.getElementById("dashboard-id");
+        return !dashboard || !dashboard.contains(event.target as Node);
+      }),map(
         (mouseEvent: MouseEvent): MonitorItem => ({
           type: mouseEvent.type,
           clientX: mouseEvent.clientX,
@@ -121,7 +124,8 @@ const monitorService: MonitorService = () => {
           time: globalState.clickTime,
           hour: `${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
         })
-      )
+      ),
+      
     )
     .subscribe((monitor: MonitorItem) => {
       globalState.monitorData.push(monitor);
