@@ -104,7 +104,8 @@ const monitorService: MonitorService = () => {
       filter((event: MouseEvent) => {
         const dashboard = document.getElementById("dashboard-id");
         return !dashboard || !dashboard.contains(event.target as Node);
-      }),map(
+      }),
+      map(
         (mouseEvent: MouseEvent): MonitorItem => ({
           type: mouseEvent.type,
           clientX: mouseEvent.clientX,
@@ -124,8 +125,7 @@ const monitorService: MonitorService = () => {
           time: globalState.clickTime,
           hour: `${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
         })
-      ),
-      
+      )
     )
     .subscribe((monitor: MonitorItem) => {
       globalState.monitorData.push(monitor);
@@ -168,7 +168,6 @@ const openDashboard = () => {
     buttonReports.classList.add("active");
     table.classList.contains("hidden") && table.classList.remove("hidden");
     !settings.classList.contains("hidden") && settings.classList.add("hidden");
-    fillTable();
   }
   if (globalState.tab === Tab.SETTINGS) {
     buttonSettings.classList.add("active");
@@ -176,6 +175,8 @@ const openDashboard = () => {
     settings.classList.contains("hidden") &&
       settings.classList.remove("hidden");
   }
+  fillTable();
+  setSettings();
 
   buttonReports.addEventListener("click", () => {
     if (!buttonReports.classList.contains("active")) {
