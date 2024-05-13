@@ -37,33 +37,43 @@
               <h1>Music Player</h1>
               <h2>Descripción</h2>
               <p>
-                Este proyecto permite al usuario interactuar con un reproductor de música ficticio, básicamente las funcionalidades son reproducir/pausar, ir a la siguiente  o a la anterior canción. Con este demo demostramos cómo RxJS puede gestionar eventos de usuario complejos y operaciones asíncronas.
+                Este proyecto permite al usuario interactuar con un reproductor de música ficticio, básicamente las funcionalidades son reproducir/pausar e ir a la siguiente  o a la anterior canción. Con este proyecto demostramos cómo RxJS puede gestionar eventos de usuario complejos y operaciones asíncronas.
               
               </p>
-              <h2>Rxjs</h2>
+              <h2>RxJS</h2>
               <p>
-                A continuación veras los operadores de rxjs usados:
+                A continuación veras los operadores de RxJS usados en este proyecto:
               </p>
               <ul>
                 <li>
                   <span class="bold">fromEvent: </span>
                   <span>
-                    Detecta los eventos emitidos por botones <code>play/pause</code>, <code>next</code> y <code>prev</code> al hacer clicks.
+                    Los observables creados con este operador se utilizan para capturar eventos como pausas en la reproducción de audio, clics en botones del reproductor y movimientos del mouse.
                   </span>
                   
+                </li>
+                <li>
+                  <span class="bold">switchMap: </span>
+                  <span>
+                    Se utiliza para manejar el arrastre de la barra de progreso.
+                  </span>
+                </li>
+                <li>
+                  <span class="bold">map: </span>
+                  <span>
+                    Se utiliza para calcular la nueva posición de la barra de progreso durante el arrastre.
+                  </span>
                 </li>
                 <li>
                   <span class="bold">mergeMap: </span>
                   <span>
-                    Este operador de mapa permite ejecutar diferentes acciones según el botón presionado. El evento de clic se mapea al resultado de la función definida en su interior.
+                    Se utiliza para manejar los clics en los botones del reproductor y realizar las acciones correspondientes.
                   </span>
-                  
                 </li>
                 <li>
                   <span class="bold">takeUntil: </span>
-                  <span
-                    >
-                    Permite detener la reproducción de la música cuando se hace clic en el botón de reproducción/pausa nuevamente. El observable se completa cuando se hace clic en este botón
+                  <span>
+                    Se utiliza para detener la reproducción de audio cuando ocurre un evento específico, como soltar el botón del mouse o hacer clic en un botón específico
                   </span>
                 
                 </li>
@@ -81,7 +91,13 @@
                     <div class="music-player">
                       <h3 id="song-title"></h3>
                       <span id="song-autor"></span>
-                      <progress class="progress-bar" value="0" max="100"></progress>
+
+
+                      <div id="progress-bar" class="progress-bar">
+                        <div class="progress-bar-track"></div>
+                        <div id="handle" class="progress-bar-handle"></div>
+                      </div>
+
                       <div class="time-container">
                         <span id="current-time"></span>
                         <span id="song-duration"></span>
