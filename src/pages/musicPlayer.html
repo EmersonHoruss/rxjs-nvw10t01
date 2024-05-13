@@ -1,1 +1,129 @@
-musicPlayer
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EEG Codeable</title>
+    <link rel="stylesheet" href="/src/styles/index.css" />
+  </head>
+  <body class="pancake-stack">
+    <header class="header header__shadow">
+      <h1 class="header__logo"><a href="index.html">EEG Codeable</a></h1>
+      <nav class="navigation">
+        <ul>
+          <li><a href="/src/pages/about.html">About</a></li>
+          <li class="active">
+            <a href="/src/pages/projects.html">Projects</a>
+          </li>
+        </ul>
+        <button id="/navigation__login-text" class="button-default">
+          Subscribe
+        </button>
+      </nav>
+      <button id="navigation__login-icon" class="button-icon button-outline">
+        <img
+          src="/src/assets/icons/menu.svg"
+          style="width: fit-content; height: 16px"
+        />
+      </button>
+    </header>
+
+    <main>
+      <div class="section">
+        <div class="container">
+          <div class="article">
+            <div class="content">
+              <h1>Music Player</h1>
+              <h2>Descripción</h2>
+              <p>
+                Este proyecto permite al usuario interactuar con un reproductor de música ficticio, básicamente las funcionalidades son reproducir/pausar, ir a la siguiente  o a la anterior canción. Con este demo demostramos cómo RxJS puede gestionar eventos de usuario complejos y operaciones asíncronas.
+              
+              </p>
+              <h2>Rxjs</h2>
+              <p>
+                A continuación veras los operadores de rxjs usados:
+              </p>
+              <ul>
+                <li>
+                  <span class="bold">fromEvent: </span>
+                  <span>
+                    Detecta los eventos emitidos por botones <code>play/pause</code>, <code>next</code> y <code>prev</code> al hacer clicks.
+                  </span>
+                  
+                </li>
+                <li>
+                  <span class="bold">mergeMap: </span>
+                  <span>
+                    Este operador de mapa permite ejecutar diferentes acciones según el botón presionado. El evento de clic se mapea al resultado de la función definida en su interior.
+                  </span>
+                  
+                </li>
+                <li>
+                  <span class="bold">takeUntil: </span>
+                  <span
+                    >
+                    Permite detener la reproducción de la música cuando se hace clic en el botón de reproducción/pausa nuevamente. El observable se completa cuando se hace clic en este botón
+                  </span>
+                
+                </li>
+              </ul>
+              <h2>Demo</h2>
+             
+              <div class="demo-container">
+                <div class="music-player__container">
+                  <div class="song-image">
+                    <img src="" alt=""  id="song-cover">
+                  </div>
+
+                  <div class="controls">
+                    <div class="cover"></div>
+                    <div class="music-player">
+                      <h3 id="song-title"></h3>
+                      <span id="song-autor"></span>
+                      <progress class="progress-bar" value="0" max="100"></progress>
+                      <div class="time-container">
+                        <span id="current-time"></span>
+                        <span id="song-duration"></span>
+                      </div>
+                      <div class="control-buttons">
+                        <button class="btn-secondary button-icon btn" id="prev">
+                          <img
+                            src="/src/assets/icons/previous.svg"
+                            style="width: fit-content; height: 25px"
+                          />
+                        </button>
+                        <button class="button-default button-icon btn btn-primary" id="play-toggle">
+                          <img
+                            id="play-toggle-img"
+                            src="/src/assets/icons/play.svg"
+                            style="width: fit-content; height: 30px"
+                          />
+                        </button>
+                        <button class="btn-secondary button-icon btn" id="next">
+                          <img
+                            src="/src/assets/icons/next.svg"
+                            style="width: fit-content; height: 25px"
+                          />
+                        </button>
+                      </div>
+                    </div>
+  
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="container footer">
+      <small class="footer__text"
+        >&copy; 2024 EEG Codeable - Todos los derechos reservados</small
+      >
+    </footer>
+    <script type="module" src="/src/scripts/music-player.ts"></script>
+  </body>
+</html>

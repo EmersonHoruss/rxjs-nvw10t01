@@ -1,0 +1,31 @@
+[
+
+  {
+      "title": "It's Time",
+      "artist": "Imagine Dragons",
+      "url": "/src/assets/music/Imagine Dragons - Its Time.mp3",
+      "duration": 237.000,
+      "coverUrl": "/src/assets/images/It's Time.jpg"
+    },
+    {
+      "title": "Zero",
+      "artist": "Imagine Dragons",
+      "url": "/src/assets/music/Imagine Dragons - Zero.mp3",
+      "duration": 211.000,
+      "coverUrl": "/src/assets/images/Zero.jpg"
+    },
+    {
+      "title": "The One That Got Away",
+      "artist": "Katy Perry",
+      "url": "/src/assets/music/Katy Perry - The One That Got Away.mp3",
+      "duration": 227.000,
+      "coverUrl": "/src/assets/images/The One That Got Away.jpg"
+    },
+    {
+      "title": "Geronimo",
+      "artist": "Sheppard",
+      "url": "/src/assets/music/Sheppard - Geronimo.mp3",
+      "duration": 219.000,
+      "coverUrl": "/src/assets/images/Geronimo.jpg"
+    }
+]
