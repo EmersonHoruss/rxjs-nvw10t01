@@ -1,5 +1,4 @@
 .demo-container{
-    background: whitesmoke;
     padding-block: var(--spacing-24);
     border-radius: var(--rounded-md);
 }
