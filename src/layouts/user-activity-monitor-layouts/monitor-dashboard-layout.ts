@@ -31,7 +31,16 @@ export const monitorDashboardLayout = `
                 <tbody id="monitor__dashboard-table-body-id"></tbody>
             </table>
         </div>
-        <div id="monitor__dashboard-settings">settings</div>
+        <div class="monitor__dashboard-settings" id="monitor__dashboard-settings">
+            <div class="form-field">
+                <label class="form-field__label">Click time interval (ms)</label>
+                <input class="form-field__main-content" id="monitor__dashboard-click-time-interval-id" type="number"/>
+            </div>
+            <div class="form-field">
+                <label class="form-field__label">Mouse over interval (ms)</label>
+                <input class="form-field__main-content" id="monitor__dashboard-mouseover-time-interval-id" type="number"/>
+            </div>
+        </div>
     </div>
 </div>
 `;

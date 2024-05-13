@@ -227,4 +227,17 @@ const fillTable = () => {
   }
 };
 
-const setSettings = () => {};
+const setSettings = () => {
+  const dashboard = document.getElementById("dashboard-id");
+  if (dashboard) {
+    const clickTimeInput = document.getElementById(
+      "monitor__dashboard-click-time-interval-id"
+    ) as HTMLInputElement;
+    clickTimeInput.value = globalState.clickTime + "";
+
+    const mouseMoveTimeInput = document.getElementById(
+      "monitor__dashboard-mouseover-time-interval-id"
+    ) as HTMLInputElement;
+    mouseMoveTimeInput.value = globalState.mouseMoveTime + "";
+  }
+};

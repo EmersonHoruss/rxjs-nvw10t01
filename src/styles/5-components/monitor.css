@@ -119,3 +119,9 @@
   position: absolute;
   top: 4px;
 }
+
+.monitor__dashboard-settings {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
